@@ -46,7 +46,7 @@ export default {
 
 .social-media {
   .social-link {
-    color: $primary_color;
+    color: inherit;
   }
 
   .icon {
