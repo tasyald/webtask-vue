@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  name: 'PhotoGrid',
   props: {
     photos: {
       type: Array,
