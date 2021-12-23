@@ -64,7 +64,7 @@ export default {
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding-top: 3rem;
+    padding-top: 3rem !important;
 
     .column {
       text-align: center !important;
