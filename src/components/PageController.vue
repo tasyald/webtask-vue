@@ -14,7 +14,7 @@
 <script>
 export default {
   name: 'PageController',
-  data: function() {
+  data() {
     return {
       currentPage: 1,
       nextIcon: '$next'
