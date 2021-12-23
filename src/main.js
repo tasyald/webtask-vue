@@ -4,12 +4,12 @@ import router from './router'
 import store from './store'
 import vuetify from '@/plugins/vuetify'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHeart, faShareAlt } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookSquare, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faHeart, faShareAlt, faComments } from '@fortawesome/free-solid-svg-icons'
+import {faFacebookSquare, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import 'bulma/css/bulma.css'
 
-library.add(faHeart, faShareAlt, faFacebookSquare, faInstagram, faTwitter)
+library.add(faHeart, faShareAlt, faFacebookSquare, faInstagram, faTwitter, faComments)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
