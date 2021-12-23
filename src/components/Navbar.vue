@@ -55,7 +55,7 @@ export default {
   padding: 0 2rem;
   box-shadow: 0px 6px 8px rgba(68, 64, 64, 0.2);
   height: 3.5rem;
-  position: fixed;
+  position: fixed !important;
   width: 100%;
 
   .navbar-brand {

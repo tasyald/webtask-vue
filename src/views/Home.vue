@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home page">
     <hero title="Photos" :subtitle="subtitle" image="https://source.unsplash.com/random" />
     <photo-grid :photos="paginate(photos, PAGE_SIZE, page)" />
     <page-controller :pages="pages" :onChange="onChangePage" />
