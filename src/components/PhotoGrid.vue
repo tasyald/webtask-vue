@@ -27,7 +27,7 @@ export default {
   props: {
     photos: {
       type: Array,
-      default: function() {
+      default() {
         return []
       }
     }
