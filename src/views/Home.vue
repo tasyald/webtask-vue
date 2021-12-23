@@ -7,20 +7,18 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Hero from '@/components/Hero.vue'
 import PhotoGrid from '@/components/PhotoGrid.vue'
 import PageController from '@/components/PageController.vue'
 import axios from 'axios'
-import { SUBTITLE_URL, PHOTOS_URL } from '@/constants/api'
+import { SUBTITLE_URL } from '@/constants/api'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Home',
   data() {
     return {
       subtitle: undefined,
-      photos: [],
-      pages: 1,
       page: 1,
     }
   },
@@ -34,7 +32,9 @@ export default {
   },
   mounted() {
     this.fetchSubtitle()
-    this.fetchPhotos()
+    if (this.$store.getters.photos.length === 0) {
+      this.$store.dispatch('getPhotos')
+    }
   },
   methods: {
     async fetchSubtitle() {
@@ -46,21 +46,19 @@ export default {
         .catch(() => {
         })
     },
-    async fetchPhotos() {
-      await axios.get(PHOTOS_URL)
-        .then((res) => {
-          const { data } = res
-          this.photos = data
-          this.pages = Math.ceil(data.length / this.PAGE_SIZE)
-        })
-        .catch(() => {
-        })
-    },
     paginate(array, pageSize, page) {
       return array.slice((page - 1) * pageSize, page * pageSize)
     },
     onChangePage(currentPage) {
       this.page = currentPage
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'photos'
+    ]),
+    pages() {
+      return Math.ceil(this.$store.getters.photos.length / this.PAGE_SIZE)
     }
   }
 }

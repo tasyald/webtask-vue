@@ -16,8 +16,7 @@ export default {
   name: 'PageController',
   data() {
     return {
-      currentPage: 1,
-      nextIcon: '$next'
+      currentPage: 1
     }
   },
   props: {
