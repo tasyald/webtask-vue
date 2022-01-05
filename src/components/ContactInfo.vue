@@ -1,6 +1,6 @@
 <template>
   <div class="contact-info column is-7">
-    <customer-support number="1-500-445" />
+    <customer-support :number="number" />
     <contact-social />
   </div>
 </template>
@@ -14,6 +14,12 @@ export default {
   components: {
     CustomerSupport,
     ContactSocial
+  },
+  props: {
+    number: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>

@@ -9,7 +9,8 @@ export default new Vuex.Store({
   state: {
     photos: [],
     title: '',
-    description: ''
+    description: '',
+    phone: '1-500-445'
   },
   mutations: {
     setPhotos(state, photos) {
@@ -59,6 +60,7 @@ export default new Vuex.Store({
   getters: {
     photos: state => state.photos,
     title: state => state.title,
-    description: state => state.description
+    description: state => state.description,
+    phone: state => state.phone
   }
 })
