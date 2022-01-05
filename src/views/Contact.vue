@@ -9,7 +9,7 @@
 
 <script>
 import ContactForm from '@/components/ContactForm.vue'
-import ContactInfo from '../components/ContactInfo.vue'
+import ContactInfo from '@/components/ContactInfo.vue'
 
 export default {
   name: 'Contact',
